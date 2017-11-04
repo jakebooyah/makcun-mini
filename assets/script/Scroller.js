@@ -15,18 +15,22 @@ cc.Class({
         }, this.node);
     },
 
-    onTouchBegan(touch) {
+    //get location is an event function for location
+
+    onTouchBegan(touch) {//when fingger touch it
+       
+        
         cc.log('onTouchBegan');
         this._isTouching = true;
-        this._touchLocation = touch.getLocation();
+        this._touchLocation = touch.getLocation();//get the location of a fingger
 
         return true;
     },
 
     onTouchEnded(touch, event) {
-        cc.log('onTouchEnded');
-        const location = touch.getLocation();
-        this.rotateToPoint(location);
+        cc.log('onTouchEnded');//when fingger remove
+        const location = touch.getLocation();//get the  current location
+        this.rotateToPoint(location);//position of an object 
 
         this._isTouching = false;
         this._touchLocation = null;
@@ -37,18 +41,20 @@ cc.Class({
     onTouchMoved(touch, event) {
         cc.log('onTouchMoved');
         const location = touch.getLocation();
-        this.rotateToPoint(location);
+        this.rotateToPoint(location);//update of an object position
 
         return true;
     },
 
     rotateToPoint(location) {
-        const delta = location.x - this._touchLocation.x;
+        const delta = location.x - this._touchLocation.x;//
 
         this._touchLocation = location;
 
-        cc.log(this.node.rotation);
-        this.node.rotation = this.node.rotation + delta * 0.1;
-        cc.log(this.node.rotation);
+        //cc.log(this.node.rotation);
+        this.node.rotation = this.node.rotation + delta * 0.1;//update the scroll position
+        //cc.log(this.node.rotation);
+        
     }
+    
 });
