@@ -1,8 +1,3 @@
-const REGIONS = cc.Enum({
-    KEDAH: 0,
-    PERLIS: 1,
-});
-
 cc.Class({
     extends: cc.Component,
 
