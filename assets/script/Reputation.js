@@ -8,11 +8,15 @@ cc.Class({
         reputationLabel: cc.Label
     },
 
-    getCash() {
-        return model.cash;
+    init() {
+        this.setReputation(this.getReputation());
     },
 
-    setCash(newValue) {
+    getReputation() {
+        return model.reputation;
+    },
+
+    setReputation(newValue) {
         setData('reputation', newValue);
         this.reputationLabel.string = preFix + newValue;
     }

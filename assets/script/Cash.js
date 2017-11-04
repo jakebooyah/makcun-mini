@@ -8,6 +8,10 @@ cc.Class({
         cashLabel: cc.Label
     },
 
+    init() {
+        this.setCash(this.getCash());
+    },
+
     getCash() {
         return model.cash;
     },

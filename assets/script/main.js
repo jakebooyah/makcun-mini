@@ -19,6 +19,9 @@ cc.Class({
         delegates.regionsController = this.regionsControllerHolder.getComponent('RegionsController');
         delegates.scrollerController = this.scrollerControllerHolder.getComponent('Scroller');
         delegates.scrollerController.regionsController = delegates.regionsController;
+
+        delegates.cashController.init();
+        delegates.reputationController.init();
     },
 
     onRegionSelect() {
