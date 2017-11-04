@@ -6,13 +6,8 @@ cc.Class({
         _highlightedRegion: 0
     },
 
-    setOnRegionSelect(callback) {
-        this._onRegionSelected = callback;
-    },
-
-    selectRegion() {
+    selectRegion(callback) {
         const selected = this._selected = this._highlightedRegion;
-
         this.regions[selected].getComponent('Region').playSelectedAnim();
 
         const callback = this._onRegionSelected;

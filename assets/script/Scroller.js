@@ -14,14 +14,13 @@ cc.Class({
 
     setEnable(bool) {
         if (bool) {
-            this._listener = cc.eventManager.addListener({
-                event: cc.EventListener.TOUCH_ONE_BY_ONE,
-                onTouchBegan: this.onTouchBegan.bind(this),
-                onTouchMoved: this.onTouchMoved.bind(this),
-                onTouchEnded: this.onTouchEnded.bind(this)
-            }, this.node);
+            this.node.on(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+            this.node.on(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
+            this.node.on(cc.Node.EventType.TOUCH_ENDED, this.onTouchEnded, this);
         } else {
-            this._listener && cc.eventManager.removeListener(this._listener);
+            this.node.off(cc.Node.EventType.TOUCH_START, this.onTouchBegan, this);
+            this.node.off(cc.Node.EventType.TOUCH_MOVE, this.onTouchMoved, this);
+            this.node.off(cc.Node.EventType.TOUCH_ENDED, this.onTouchEnded, this);
         }
     },
 

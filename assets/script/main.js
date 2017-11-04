@@ -13,18 +13,19 @@ cc.Class({
     onLoad() {
         const delegates = this.delegates = {};
 
-        delegates.regionsController = this.regionsControllerHolder.getComponent('RegionsController');
-        delegates.regionsController.setOnRegionSelect(this.onRegionSelect.bind(this));
-
-        delegates.scrollerController = this.scrollerControllerHolder.getComponent('Scroller');
-        delegates.scrollerController.regionsController = delegates.regionsController;
-
         delegates.reputationController = this.reputationControllerHolder.getComponent('Reputation');
         delegates.cashController = this.cashControllerHolder.getComponent('Cash');
         delegates.moreInfoController = this.moreInfoControllerHolder.getComponent('MoreInfoController');
+        delegates.regionsController = this.regionsControllerHolder.getComponent('RegionsController');
+        delegates.scrollerController = this.scrollerControllerHolder.getComponent('Scroller');
+        delegates.scrollerController.regionsController = delegates.regionsController;
     },
 
-    onRegionSelect(selectedRegion) {
+    onRegionSelect() {
+        this.delegates.regionsController.selectRegion(this._onRegionSelected.bind(this));
+    },
+
+    _onRegionSelected(selectedRegion) {
         cc.log('Selected Region' + selectedRegion);
     }
 });
