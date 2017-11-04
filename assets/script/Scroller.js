@@ -10,19 +10,25 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
-        cc.eventManager.addListener({
-            event: cc.EventListener.TOUCH_ONE_BY_ONE,
-            onTouchBegan: this.onTouchBegan.bind(this),
-            onTouchMoved: this.onTouchMoved.bind(this),
-            onTouchEnded: this.onTouchEnded.bind(this)
-        }, this.node);
+
+    },
+
+    setEnable(bool) {
+        if (bool) {
+            cc.eventManager.addListener({
+                event: cc.EventListener.TOUCH_ONE_BY_ONE,
+                onTouchBegan: this.onTouchBegan.bind(this),
+                onTouchMoved: this.onTouchMoved.bind(this),
+                onTouchEnded: this.onTouchEnded.bind(this)
+            }, this.node);
+        } else {
+
+        }
     },
 
     //get location is an event function for location
 
     onTouchBegan(touch) {//when fingger touch it
-
-
         cc.log('onTouchBegan');
         this._isTouching = true;
         this._touchLocation = touch.getLocation();//get the location of a fingger
