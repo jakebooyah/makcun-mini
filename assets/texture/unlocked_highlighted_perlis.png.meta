@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "38321a0d-e9fd-458a-95bf-b098cdc003f5",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_highlighted_perlis": {
+      "ver": "1.0.3",
+      "uuid": "97b71ab6-65bd-461c-b378-a1129c0876dd",
+      "rawTextureUuid": "38321a0d-e9fd-458a-95bf-b098cdc003f5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 36,
+      "height": 42,
+      "rawWidth": 36,
+      "rawHeight": 42,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

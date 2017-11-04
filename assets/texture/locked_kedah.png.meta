@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a429bb77-3238-465a-8ebf-0f9fe7f03d8e",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "locked_kedah": {
+      "ver": "1.0.3",
+      "uuid": "ddc9d223-b486-4d9f-979b-ea44fa97bf39",
+      "rawTextureUuid": "a429bb77-3238-465a-8ebf-0f9fe7f03d8e",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 123,
+      "height": 112,
+      "rawWidth": 123,
+      "rawHeight": 112,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

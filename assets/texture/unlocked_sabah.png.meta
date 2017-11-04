@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b5a32860-81b3-490d-8e64-578e38c53171",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_sabah": {
+      "ver": "1.0.3",
+      "uuid": "e936e76e-4af2-4675-8a7f-dbcc9d01df0f",
+      "rawTextureUuid": "b5a32860-81b3-490d-8e64-578e38c53171",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 352,
+      "height": 234,
+      "rawWidth": 352,
+      "rawHeight": 234,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "ff7146a4-4dd3-45e2-96ca-c993e737467f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_highlighted_sarawak": {
+      "ver": "1.0.3",
+      "uuid": "52bf4d4e-ff5a-4b2c-83b1-19bdba6b992f",
+      "rawTextureUuid": "ff7146a4-4dd3-45e2-96ca-c993e737467f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 495,
+      "height": 386,
+      "rawWidth": 495,
+      "rawHeight": 386,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

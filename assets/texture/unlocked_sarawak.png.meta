@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "a204a1f5-566e-4c3c-9c54-228abc9c2fc2",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_sarawak": {
+      "ver": "1.0.3",
+      "uuid": "fbb13d45-216e-4385-b488-c1bf3d675666",
+      "rawTextureUuid": "a204a1f5-566e-4c3c-9c54-228abc9c2fc2",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 495,
+      "height": 386,
+      "rawWidth": 495,
+      "rawHeight": 386,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

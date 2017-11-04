@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "509af71b-3b47-4fe9-8bdf-a371eb670fa8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_kelantan": {
+      "ver": "1.0.3",
+      "uuid": "1e31c78a-09a1-4358-8876-881c887012cf",
+      "rawTextureUuid": "509af71b-3b47-4fe9-8bdf-a371eb670fa8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 111,
+      "height": 141,
+      "rawWidth": 111,
+      "rawHeight": 141,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

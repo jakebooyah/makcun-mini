@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "7459fc0a-71e6-4318-9dec-c9a297ee7898",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "locked_selangor": {
+      "ver": "1.0.3",
+      "uuid": "b8c43e2b-5532-41bf-9f03-2c56c2549e8e",
+      "rawTextureUuid": "7459fc0a-71e6-4318-9dec-c9a297ee7898",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 106,
+      "height": 109,
+      "rawWidth": 106,
+      "rawHeight": 109,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

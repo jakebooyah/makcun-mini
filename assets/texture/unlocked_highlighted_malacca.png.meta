@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "75adb910-ec72-4b88-a86f-90dfd93f7f38",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "unlocked_highlighted_malacca": {
+      "ver": "1.0.3",
+      "uuid": "6d0b201d-7687-4c37-8106-26e611fea759",
+      "rawTextureUuid": "75adb910-ec72-4b88-a86f-90dfd93f7f38",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 56,
+      "height": 41,
+      "rawWidth": 56,
+      "rawHeight": 41,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
