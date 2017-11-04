@@ -38,14 +38,14 @@ cc.Class({
         cc.log('onTouchMoved');
         const location = touch.getLocation();
         this.rotateToPoint(location);
-        
+
         return true;
     },
 
     rotateToPoint(location) {
         const deltaX = location.x - this._touchLocation.x;
         const deltaY = location.y - this._touchLocation.y;
-        
+
         // this._touchLocation = location;
 
         cc.log(this.node.rotation);
