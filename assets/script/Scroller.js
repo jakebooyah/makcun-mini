@@ -21,8 +21,8 @@ cc.Class({
     //get location is an event function for location
 
     onTouchBegan(touch) {//when fingger touch it
-       
-        
+
+
         cc.log('onTouchBegan');
         this._isTouching = true;
         this._touchLocation = touch.getLocation();//get the location of a fingger
@@ -58,7 +58,7 @@ cc.Class({
 
     checkSelection() {
         const delta = this.node.rotation - this._lastUpdateRotation;
-        const segmentAngle = 360 / REGIONS.length;
+        const segmentAngle = 10;
 
         cc.log(this.node.rotation);
         cc.log(delta);
