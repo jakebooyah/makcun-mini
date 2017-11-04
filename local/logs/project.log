@@ -1,0 +1,52 @@
+2017-11-04T03:57:39.301Z - normal: Load ~/.CocosCreator/settings.json
+2017-11-04T03:57:39.307Z - normal: checking language setting...
+2017-11-04T03:57:39.307Z - normal: Language: en
+2017-11-04T03:57:39.808Z - success: protocol editor-framework registered
+2017-11-04T03:57:39.809Z - success: protocol app registered
+2017-11-04T03:57:39.809Z - success: protocol theme registered
+2017-11-04T03:57:39.809Z - success: protocol profile registered
+2017-11-04T03:57:39.809Z - success: protocol packages registered
+2017-11-04T03:57:39.811Z - success: protocol unpack registerred
+2017-11-04T03:57:39.812Z - success: protocol disable-commonjs registerred
+2017-11-04T03:57:42.255Z - normal: connected!
+2017-11-04T03:57:42.257Z - normal: Check project /Users/jake/Git/makcunmini/project
+2017-11-04T03:57:42.258Z - normal: Initializing Cocos2d
+2017-11-04T03:57:42.430Z - normal: Initializing Asset Database
+2017-11-04T03:57:42.457Z - success: protocol uuid registerred
+2017-11-04T03:57:42.457Z - success: protocol db registerred
+2017-11-04T03:57:42.457Z - success: protocol thumbnail registerred
+2017-11-04T03:57:42.457Z - normal: Loading editor/builtin packages
+2017-11-04T03:57:42.474Z - success: anysdk loaded
+2017-11-04T03:57:42.588Z - success: assets loaded
+2017-11-04T03:57:42.592Z - success: builder loaded
+2017-11-04T03:57:42.596Z - success: hierarchy loaded
+2017-11-04T03:57:42.600Z - success: inspector loaded
+2017-11-04T03:57:42.601Z - success: keystore loaded
+2017-11-04T03:57:42.606Z - success: node-library loaded
+2017-11-04T03:57:42.608Z - success: package-asset loaded
+2017-11-04T03:57:42.609Z - success: preferences loaded
+2017-11-04T03:57:42.613Z - success: project-exporter loaded
+2017-11-04T03:57:42.627Z - success: project-importer loaded
+2017-11-04T03:57:42.631Z - success: project-settings loaded
+2017-11-04T03:57:42.635Z - success: ui-kit loaded
+2017-11-04T03:57:42.642Z - success: ui-grid loaded
+2017-11-04T03:57:42.647Z - success: scene loaded
+2017-11-04T03:57:42.648Z - success: sprite-editor loaded
+2017-11-04T03:57:42.653Z - success: store loaded
+2017-11-04T03:57:42.659Z - success: timeline loaded
+2017-11-04T03:57:42.659Z - normal: Loading builtin packages
+2017-11-04T03:57:42.663Z - success: asset-db-debugger loaded
+2017-11-04T03:57:42.664Z - success: color-picker loaded
+2017-11-04T03:57:42.668Z - success: console loaded
+2017-11-04T03:57:42.672Z - success: package-manager loaded
+2017-11-04T03:57:42.676Z - success: sdkbox loaded
+2017-11-04T03:57:42.680Z - success: tester loaded
+2017-11-04T03:57:42.684Z - success: ui-kit-preview-extra loaded
+2017-11-04T03:57:42.687Z - success: ui-kit-preview loaded
+2017-11-04T03:57:42.690Z - success: ui-tree loaded
+2017-11-04T03:57:43.396Z - normal: Initializing project /Users/jake/Git/makcunmini/project
+2017-11-04T03:57:43.398Z - normal: Loading packages
+2017-11-04T03:57:43.403Z - normal: Watching packages
+2017-11-04T03:57:43.415Z - normal: Run Application
+2017-11-04T03:57:44.319Z - success: preview server running at http://localhost:7456
+2017-11-04T03:57:47.983Z - normal: 1.6.2
