@@ -25,7 +25,7 @@ cc.Class({
     },
 
     SpawnIngridient(){//summon ingridient
-        let summonIngrident = cc.instantiate(this.IngridientList[Math.round(Math.random())]);//get the random ingridient
+        let summonIngrident = cc.instantiate(this.IngridientList[Math.round(Math.random()*7)]);//get the random ingridient
         summonIngrident.setPosition(this.GetNewPosition());
         summonIngrident.getComponent('Ingredient').setPotPosition(this.pot.getPosition());
         this.node.addChild(summonIngrident);
