@@ -14,7 +14,7 @@ cc.Class({
         // ...
         Duration: 0,
         Speed: 750,
-        
+        RightIngredient: true,
         
     },
 
@@ -30,8 +30,13 @@ cc.Class({
 
     onPlayerTouch() {
         this.node.stopAllActions();
-        let MoveToPot = cc.moveTo(this.Duration,cc.p())
-        this.node.runAction()
+        if(RightIngredient == true)
+        {
+            cc.log('Correct');
+        }
+        else{
+            cc.log('Wrong');
+        }
     },
 
     _onFinish() {
