@@ -22,6 +22,7 @@ cc.Class({
 
         delegates.cashController.init();
         delegates.reputationController.init();
+        delegates.regionsController.init();
     },
 
     onRegionSelect() {

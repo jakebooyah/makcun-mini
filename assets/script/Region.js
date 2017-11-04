@@ -2,7 +2,25 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        selectHighlight: cc.Node
+        selectHighlight: cc.Node,
+
+        highlightSprite: cc.Sprite,
+        baseSprite: cc.Sprite,
+
+        lockedHighlight: cc.SpriteFrame,
+        locked: cc.SpriteFrame,
+        unlockedHighlight: cc.SpriteFrame,
+        unlocked: cc.SpriteFrame
+    },
+
+    setIsUnlock(bool) {
+        if (bool) {
+            this.highlightSprite.spriteFrame = this.unlockedHighlight;
+            this.baseSprite.spriteFrame = this.unlocked;
+        } else {
+            this.highlightSprite.spriteFrame = this.lockedHighlight;
+            this.baseSprite.spriteFrame = this.locked;
+        }
     },
 
     setHighlight(bool) {

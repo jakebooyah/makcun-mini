@@ -1,4 +1,5 @@
 import { model, setData } from 'Model';
+import { REGIONS } from 'Constants';
 
 cc.Class({
     extends: cc.Component,
@@ -6,6 +7,15 @@ cc.Class({
     properties: {
         regions: [cc.Node],
         _highlightedRegion: 0
+    },
+
+    init() {
+        for (let index = 0; index < REGIONS.length; index++) {
+            const name = REGIONS[index];
+            this.regions[index].getComponent('Region').setIsUnlock(model[name]);
+        }
+
+        this.hightlightRegion(0);
     },
 
     selectRegion(callback) {
