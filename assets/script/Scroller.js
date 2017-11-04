@@ -1,8 +1,11 @@
+import { REGIONS } from 'Contants';
+
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        wheel: cc.Node
+        wheel: cc.Node,
+        _lastUpdateRotation: 0
     },
 
     // use this for initialization
@@ -44,11 +47,26 @@ cc.Class({
 
     rotateToPoint(location) {
         const delta = location.x - this._touchLocation.x;
-
         this._touchLocation = location;
+        this.node.rotation = this.node.rotation + delta * 0.1;
+        this.checkSelection();
+    },
+
+    checkSelection() {
+        const delta = this.node.rotation - this._lastUpdateRotation;
+        const segmentAngle = 360 / REGIONS.length;
 
         cc.log(this.node.rotation);
-        this.node.rotation = this.node.rotation + delta * 0.1;
-        cc.log(this.node.rotation);
-    }
+        cc.log(delta);
+
+        if (Math.abs(delta) > segmentAngle) {
+
+            if (delta > 0) {
+                this.regionsController.next();
+            } else if (delta < 0) {
+                this.regionsController.previous();
+            }
+            this._lastUpdateRotation = this.node.rotation;
+        }
+    },
 });

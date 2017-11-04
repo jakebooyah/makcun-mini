@@ -463,7 +463,7 @@
     },
     "_children": [],
     "_tag": -1,
-    "_active": false,
+    "_active": true,
     "_components": [
       {
         "__id__": 12
@@ -812,7 +812,8 @@
     "_enabled": true,
     "wheel": {
       "__id__": 18
-    }
+    },
+    "_lastUpdateRotation": 0
   },
   {
     "__type__": "cc.Canvas",

@@ -2,7 +2,8 @@ cc.Class({
     extends: cc.Component,
 
     properties: {
-        regions: [cc.Node]
+        regions: [cc.Node],
+        _highlightedRegion: 0
     },
 
     setOnRegionSelect(callback) {
@@ -21,7 +22,7 @@ cc.Class({
     hightlightRegion(id) {
         this.regions[this._highlightedRegion].getComponent('Region').setHighlight(false);
         this._highlightedRegion = id;
-        this.regions[id].setHighlight(true);
+        this.regions[id].getComponent('Region').setHighlight(true);
     },
 
     next() {
@@ -33,6 +34,6 @@ cc.Class({
     previous() {
         let prev = this._highlightedRegion - 1;
         if (prev < 0) prev = this.regions.length - 1;
-        this.hightlightRegion(next);
+        this.hightlightRegion(prev);
     }
 });
