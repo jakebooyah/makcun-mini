@@ -33,8 +33,8 @@ cc.Class({
         this.node.zIndex = 1;
         this.node.runAction(cc.sequence(
             cc.spawn(
-                cc.scaleTo(0.7, 1.3),
-                cc.fadeTo(0.7, 128)
+                cc.scaleTo(0.3, 1.3),
+                cc.fadeTo(0.3, 128)
             ),
             cc.callFunc(this.onSelectAnimComplete, this)
         ));

@@ -3821,8 +3821,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 667,
-      "y": -374.5
+      "x": 629,
+      "y": -334
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -3848,7 +3848,7 @@
     ],
     "_prefab": null,
     "_id": "b8orJO3IlF6Is/6NvOX+yz",
-    "_opacity": 64,
+    "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
@@ -3869,8 +3869,8 @@
     },
     "_rotationX": 0,
     "_rotationY": 0,
-    "_scaleX": 1,
-    "_scaleY": 1,
+    "_scaleX": 0.5,
+    "_scaleY": 0.5,
     "_position": {
       "__type__": "cc.Vec2",
       "x": 0,
@@ -3906,7 +3906,7 @@
     "_fillRange": 0,
     "_isTrimmedMode": true,
     "_srcBlendFactor": 770,
-    "_dstBlendFactor": 1,
+    "_dstBlendFactor": 771,
     "_atlas": null
   },
   {

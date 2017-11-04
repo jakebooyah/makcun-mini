@@ -56,18 +56,18 @@ cc.Class({
     rotateToPoint(location) {
         const delta = location.x - this._touchLocation.x;
         this._touchLocation = location;
-        this.node.rotation = this.node.rotation + delta * 0.1;//update the scroll position
+        this.node.rotation = this.node.rotation + delta;//update the scroll position
         this.checkSelection();
     },
 
     checkSelection() {
         const delta = this.node.rotation - this._lastUpdateRotation;
-        const segmentAngle = 10;
+        const segmentAngle = 5;
 
         // cc.log(this.node.rotation);
         // cc.log(delta);
 
-        if (Math.abs(delta) > segmentAngle) {
+        if (Math.abs(delta * 0.1) > segmentAngle) {
 
             if (delta > 0) {
                 this.regionsController.next();
