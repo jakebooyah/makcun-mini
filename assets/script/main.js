@@ -11,13 +11,13 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
-        const delegates = this.delegates;
+        const delegates = this.delegates = {};
 
         delegates.regionsController = this.regionsControllerHolder.getComponent('RegionsController');
         delegates.regionsController.setOnRegionSelect(this.onRegionSelect.bind(this));
 
         delegates.scrollerController = this.scrollerControllerHolder.getComponent('Scroller');
-        delegates.scrollerController.regionsController = this.regionsController;
+        delegates.scrollerController.regionsController = delegates.regionsController;
 
         delegates.reputationController = this.reputationControllerHolder.getComponent('Reputation');
         delegates.cashController = this.cashControllerHolder.getComponent('Cash');

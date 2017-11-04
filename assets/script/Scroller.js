@@ -8,6 +8,10 @@ cc.Class({
         _lastUpdateRotation: 0
     },
 
+    onLoad() {
+        this.setEnable(true);
+    },
+
     setEnable(bool) {
         if (bool) {
             this._listener = cc.eventManager.addListener({
@@ -61,8 +65,8 @@ cc.Class({
         const delta = this.node.rotation - this._lastUpdateRotation;
         const segmentAngle = 10;
 
-        cc.log(this.node.rotation);
-        cc.log(delta);
+        // cc.log(this.node.rotation);
+        // cc.log(delta);
 
         if (Math.abs(delta) > segmentAngle) {
 
