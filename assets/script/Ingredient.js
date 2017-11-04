@@ -15,11 +15,29 @@ cc.Class({
         Duration: 0,
         Speed: 750,
         
+        
     },
 
     // use this for initialization
     onLoad: function () {
-        let JumpDown = cc.moveBy(this.Duration,cc.p(this.node.x,this.Speed));
+        let JumpDown = cc.moveTo(this.Duration,cc.p(this.node.x,-this.Speed)); 
+        this.node.runAction(cc.sequence(JumpDown, cc.callFunc(this._onFinish, this)));
+    },
+
+    setOnDestroyCallBack(callback) {
+        this._onDestroy = callback;
+    },
+
+    onPlayerTouch() {
+        this.node.stopAllActions();
+        let MoveToPot = cc.moveTo(this.Duration,cc.p())
+        this.node.runAction()
+    },
+
+    _onFinish() {
+        const callback = this._onDestroy;
+        callback && callback();
+        this.node.destroy();
     },
 
     // called every frame, uncomment this function to activate update callback
