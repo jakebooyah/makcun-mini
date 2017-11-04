@@ -840,6 +840,9 @@
     "_enabled": true,
     "regionsControllerHolder": {
       "__id__": 3
+    },
+    "scrollerControllerHolder": {
+      "__id__": 17
     }
   }
 ]

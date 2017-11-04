@@ -5,6 +5,19 @@ cc.Class({
         regions: [cc.Node]
     },
 
+    setOnRegionSelect(callback) {
+        this._onRegionSelected = callback;
+    },
+
+    selectRegion() {
+        const selected = this._selected = this._highlightedRegion;
+
+        this.regions[selected].getComponent('Region').playSelectedAnim();
+
+        const callback = this._onRegionSelected;
+        callback && callback(selected);
+    },
+
     hightlightRegion(id) {
         this.regions[this._highlightedRegion].getComponent('Region').setHighlight(false);
         this._highlightedRegion = id;

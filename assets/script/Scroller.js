@@ -43,13 +43,12 @@ cc.Class({
     },
 
     rotateToPoint(location) {
-        const deltaX = location.x - this._touchLocation.x;
-        const deltaY = location.y - this._touchLocation.y;
+        const delta = location.x - this._touchLocation.x;
 
-        // this._touchLocation = location;
+        this._touchLocation = location;
 
         cc.log(this.node.rotation);
-        this.node.rotation = this.node.rotation + delta * 0.01;
+        this.node.rotation = this.node.rotation + delta * 0.1;
         cc.log(this.node.rotation);
     }
 });

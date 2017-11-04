@@ -8,4 +8,8 @@ cc.Class({
     setHighlight(bool) {
         this.selectHighlight.active = bool;
     },
+
+    playSelectedAnim() {
+
+    },
 });
