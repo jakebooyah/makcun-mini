@@ -19,19 +19,20 @@ cc.Class({
 
     // use this for initialization
     onLoad: function () {
+        //this.IngridientList[0].getComponent('Ingredient').setIngridient(true);
+        //this.IngridientList[1].getComponent('Ingredient').setIngridient(false);
         this.schedule(this.SpawnIngridient, 3);
     },
 
-    SpawnIngridient(){
-
-        let summonIngrident = cc.instantiate(this.IngridientList[Math.round(Math.random(1))]);
+    SpawnIngridient(){//summon ingridient
+        let summonIngrident = cc.instantiate(this.IngridientList[Math.round(Math.random()*7)]);//get the random ingridient
         summonIngrident.setPosition(this.GetNewPosition());
-        summonIngrident.potPosition = this.pot.getPosition();
+        summonIngrident.getComponent('Ingredient').setPotPosition(this.pot.getPosition());
         this.node.addChild(summonIngrident);
 
     },
 
-    GetNewPosition(){
+    GetNewPosition(){//position of where the object summon
         let randX = (1334/3*Math.random())+1334/4;
         let randY = 750/2;
         return cc.p(randX, randY);

@@ -30,10 +30,20 @@ cc.Class({
         this._onDestroy = callback;
     },
 
+    setPotPosition(pos) {
+        this.potPosition = pos;
+    },
+
+    setIngridient(check)
+    {
+        this.RightIngredient = check;
+    },
+
     onPlayerTouch() {
         this.node.stopAllActions();
-         
+        
         let MoveNode = cc.moveTo(this.Duration/2,cc.p(this.potPosition)).easing(cc.easeCubicActionOut());
+        cc.log(this.potPosition);
         this.node.runAction(cc.sequence(MoveNode,cc.callFunc(this._onRecieve,this)))
     },
 
