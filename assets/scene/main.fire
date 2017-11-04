@@ -4911,7 +4911,7 @@
     "_cascadeOpacityEnabled": true,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 1,
+      "x": 0,
       "y": 0
     },
     "_contentSize": {
@@ -4925,7 +4925,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 263.5,
+      "x": -263.5,
       "y": -230
     },
     "_skewX": 0,
@@ -4952,7 +4952,7 @@
     "_isSystemFontUsed": true,
     "_spacingX": 0,
     "_N$string": "- stuff\n- stuff\n- stuff",
-    "_N$horizontalAlign": 1,
+    "_N$horizontalAlign": 0,
     "_N$verticalAlign": 1,
     "_N$fontFamily": "Arial",
     "_N$overflow": 0
@@ -4967,8 +4967,8 @@
     "_enabled": true,
     "isAlignOnce": false,
     "_target": null,
-    "_alignFlags": 36,
-    "_left": 0,
+    "_alignFlags": 12,
+    "_left": 20,
     "_right": 20,
     "_top": 0,
     "_bottom": 20,
@@ -4980,7 +4980,7 @@
     "_isAbsBottom": true,
     "_isAbsHorizontalCenter": true,
     "_isAbsVerticalCenter": true,
-    "_originalWidth": 0,
+    "_originalWidth": 99.3,
     "_originalHeight": 0
   },
   {
@@ -5877,6 +5877,9 @@
     },
     "actionLabel": {
       "__id__": 133
+    },
+    "preferLabel": {
+      "__id__": 123
     },
     "button": {
       "__id__": 131

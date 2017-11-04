@@ -49,4 +49,21 @@ const INVESTPRICES = {
     Sabah: 500000
 };
 
-export { REGIONS, PRICES, INVESTPRICES };
+const REGIONSPREFER = {
+    Kedah: ['Chilli', 'Pepper', 'Coconut Milk'],
+    Perlis: ['Green', 'Purple', 'Red'],
+    PulauPinang: ['Pandan', 'Salt', 'Chilli'],
+    Perak: ['Blue', 'Black', 'White'],
+    Kelantan: ['Sambal', 'Sugar', 'Coconut Milk'],
+    Terrenganu: ['Black', 'Purple', 'Blue'],
+    Pahang: ['Sambal', 'Salt', 'Chilli'],
+    Selangor: ['Yellow', 'Green', 'Red'],
+    KualaLumpur: ['Ginger', 'Pandan', 'Coconut Milk'],
+    NegeriSembilan: ['White', 'Red', 'Green'],
+    Melaka: ['Sugar', 'Sambal', 'Pandan'],
+    Johor: ['Black', 'Yellow', 'Red'],
+    Sarawak: ['Coconut Milk', 'Salt', 'Sugar'],
+    Sabah: ['White', 'Green', 'Yellow'],
+}
+
+export { REGIONS, PRICES, INVESTPRICES, REGIONSPREFER };

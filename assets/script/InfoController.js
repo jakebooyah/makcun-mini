@@ -1,5 +1,5 @@
 import { model, setData } from 'Model';
-import { REGIONS, PRICES, INVESTPRICES } from 'Constants';
+import { REGIONS, PRICES, INVESTPRICES, REGIONSPREFER } from 'Constants';
 
 cc.Class({
     extends: cc.Component,
@@ -11,6 +11,7 @@ cc.Class({
         lockedStateLabel: cc.Label,
         priceLabel: cc.Label,
         actionLabel: cc.Label,
+        preferLabel: cc.Label,
         button: cc.Node
     },
 
@@ -28,6 +29,14 @@ cc.Class({
         this.lockedStateLabel.string = isUnlock ? 'unlocked' : 'locked';
         this.actionLabel.string = isUnlock ? 'invest' : 'unlock';
         this.priceLabel.string = '$ ' + (isUnlock ? INVESTPRICES[name] : PRICES[name]);
+
+        let preferString = '';
+        const preferArray = REGIONSPREFER[name];
+        for (let index = 0; index < preferArray.length; index++) {
+            preferString = preferString + '- ' + preferArray[index] + '\n';
+        }
+
+        this.preferLabel.string = preferString;
     },
 
     hideInfo() {
