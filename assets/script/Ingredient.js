@@ -12,6 +12,8 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        CorrectNode: cc.Node,
+        WrongNode: cc.Node,
         Duration: 0,
         Speed: 750,
         RightIngredient: true,
@@ -30,12 +32,14 @@ cc.Class({
 
     onPlayerTouch() {
         this.node.stopAllActions();
-        if(RightIngredient == true)
+        if(this.RightIngredient == true)
         {
-            cc.log('Correct');
+            this.CorrectNode.active = true;
+            cc.log("True")
         }
         else{
-            cc.log('Wrong');
+            this.WrongNode.active = true;
+            cc.log("false")
         }
     },
 
