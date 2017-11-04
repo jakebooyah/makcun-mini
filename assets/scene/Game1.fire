@@ -520,6 +520,12 @@
       "__id__": 5
     },
     "_enabled": true,
+    "CorrectNode": {
+      "__id__": 8
+    },
+    "WrongNode": {
+      "__id__": 6
+    },
     "Duration": 5,
     "Speed": 750,
     "RightIngredient": true
