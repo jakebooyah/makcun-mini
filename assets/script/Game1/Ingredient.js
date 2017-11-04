@@ -32,14 +32,18 @@ cc.Class({
 
     onPlayerTouch() {
         this.node.stopAllActions();
+         
+        let MoveNode = cc.moveTo(this.Duration/2,cc.p(this.potPosition)).easing(cc.easeCubicActionOut());
+        this.node.runAction(cc.sequence(MoveNode,cc.callFunc(this._onRecieve,this)))
+    },
+
+    _onRecieve(){
         if(this.RightIngredient == true)
         {
             this.CorrectNode.active = true;
-            cc.log("True")
         }
         else{
             this.WrongNode.active = true;
-            cc.log("false")
         }
     },
 
