@@ -8,21 +8,16 @@ cc.Class({
         _lastUpdateRotation: 0
     },
 
-    // use this for initialization
-    onLoad() {
-
-    },
-
     setEnable(bool) {
         if (bool) {
-            cc.eventManager.addListener({
+            this._listener = cc.eventManager.addListener({
                 event: cc.EventListener.TOUCH_ONE_BY_ONE,
                 onTouchBegan: this.onTouchBegan.bind(this),
                 onTouchMoved: this.onTouchMoved.bind(this),
                 onTouchEnded: this.onTouchEnded.bind(this)
             }, this.node);
         } else {
-
+            this._listener && cc.eventManager.removeListener(this._listener);
         }
     },
 
