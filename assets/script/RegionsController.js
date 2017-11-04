@@ -1,3 +1,5 @@
+import { model, setData } from 'Model';
+
 cc.Class({
     extends: cc.Component,
 
@@ -8,10 +10,9 @@ cc.Class({
 
     selectRegion(callback) {
         const selected = this._selected = this._highlightedRegion;
-        this.regions[selected].getComponent('Region').playSelectedAnim();
-
-        const callback = this._onRegionSelected;
-        callback && callback(selected);
+        this.regions[selected].getComponent('Region').playSelectedAnim(() => {
+            callback && callback(selected);
+        });
     },
 
     hightlightRegion(id) {

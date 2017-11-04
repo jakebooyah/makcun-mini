@@ -1,4 +1,4 @@
-import { REGIONS } from 'Contants';
+import { REGIONS } from 'Constants';
 
 cc.Class({
     extends: cc.Component,

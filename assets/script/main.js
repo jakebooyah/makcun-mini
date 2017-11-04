@@ -6,7 +6,7 @@ cc.Class({
         scrollerControllerHolder: cc.Node,
         cashControllerHolder: cc.Node,
         reputationControllerHolder: cc.Node,
-        moreInfoControllerHolder: cc.Node,
+        infoControllerHolder: cc.Node,
     },
 
     // use this for initialization
@@ -15,7 +15,7 @@ cc.Class({
 
         delegates.reputationController = this.reputationControllerHolder.getComponent('Reputation');
         delegates.cashController = this.cashControllerHolder.getComponent('Cash');
-        delegates.moreInfoController = this.moreInfoControllerHolder.getComponent('MoreInfoController');
+        delegates.infoController = this.infoControllerHolder.getComponent('InfoController');
         delegates.regionsController = this.regionsControllerHolder.getComponent('RegionsController');
         delegates.scrollerController = this.scrollerControllerHolder.getComponent('Scroller');
         delegates.scrollerController.regionsController = delegates.regionsController;
@@ -26,6 +26,7 @@ cc.Class({
     },
 
     _onRegionSelected(selectedRegion) {
-        cc.log('Selected Region' + selectedRegion);
+        cc.log('Selected Region ' + selectedRegion);
+        this.delegates.infoController.showInfoForState(selectedRegion);
     }
 });
