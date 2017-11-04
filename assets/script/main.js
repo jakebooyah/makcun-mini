@@ -23,6 +23,7 @@ cc.Class({
         delegates.cashController.init();
         delegates.reputationController.init();
         delegates.regionsController.init();
+        delegates.infoController.init(delegates.cashController, delegates.regionsController);
     },
 
     onRegionSelect() {
@@ -32,5 +33,9 @@ cc.Class({
     _onRegionSelected(selectedRegion) {
         cc.log('Selected Region ' + selectedRegion);
         this.delegates.infoController.showInfoForState(selectedRegion);
-    }
+    },
+
+    unlockState() {
+        this.delegates.infoController.unlockState(this.delegates.cashController);
+    },
 });

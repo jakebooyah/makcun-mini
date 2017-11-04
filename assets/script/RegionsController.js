@@ -18,6 +18,11 @@ cc.Class({
         this.hightlightRegion(0);
     },
 
+    updateRegion(id) {
+        const name = REGIONS[id];
+        this.regions[id].getComponent('Region').setIsUnlock(model[name]);
+    },
+
     selectRegion(callback) {
         const selected = this._selected = this._highlightedRegion;
         this.regions[selected].getComponent('Region').playSelectedAnim(() => {
