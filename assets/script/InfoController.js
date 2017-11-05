@@ -10,9 +10,12 @@ cc.Class({
         stateNameLabel: cc.Label,
         lockedStateLabel: cc.Label,
         priceLabel: cc.Label,
-        actionLabel: cc.Label,
+        actionButton: cc.Sprite,
         preferLabel: cc.Label,
-        button: cc.Node
+        button: cc.Node,
+
+        investSpriteFrame: cc.SpriteFrame,
+        unlockSpriteFrame: cc.SpriteFrame
     },
 
     init(cashController, regionsController) {
@@ -27,7 +30,7 @@ cc.Class({
         const name = this.stateNameLabel.string = REGIONS[stateId];
         const isUnlock = this.isUnlock = model[name];
         this.lockedStateLabel.string = isUnlock ? 'unlocked' : 'locked';
-        this.actionLabel.string = isUnlock ? 'invest' : 'unlock';
+        this.actionButton.spriteFrame = isUnlock ? this.investSpriteFrame : this.unlockSpriteFrame;
         this.priceLabel.string = '$ ' + (isUnlock ? INVESTPRICES[name] : PRICES[name]);
 
         let preferString = '';
@@ -59,7 +62,7 @@ cc.Class({
         if (price < this.cashController.getCash()) {
             this.cashController.setCash(this.cashController.getCash() - price);
             this.lockedStateLabel.string = 'unlocked';
-            this.actionLabel.string = 'invest';
+            this.actionButton.spriteFrame = this.investSpriteFrame;
             this.isUnlock = 1;
             setData(name, 1);
             this.regionsController.updateRegion(stateId);

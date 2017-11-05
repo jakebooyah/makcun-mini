@@ -1,7 +1,7 @@
 const HEIGHT = 312.5;
 const DURATION = 3;
-const INTSPEED = 200;
-const MAXSPEED = 500;
+const INTSPEED = 500;
+const MAXSPEED = 700;
 const THRESHOLD = 300;
 
 cc.Class({
