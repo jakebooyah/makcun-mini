@@ -14,7 +14,7 @@ cc.Class({
         this.repBonusValue.string = repBonus + '%';
         this.bonusValue.string = bonus;
         this.missedValue.string = missed;
-        this.earnedValue.string = '$' + earned;
+        this.earnedValue.string = '$' + earned.toFixed(2);
         this.repEarnedValue.string = repEarned;
         this.node.active = true;
     },
