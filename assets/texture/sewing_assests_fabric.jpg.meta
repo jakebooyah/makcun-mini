@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "82abbd4e-1b7a-4317-9f2f-bd185a5948a5",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "sewing_assests_fabric": {
+      "ver": "1.0.3",
+      "uuid": "c2e50645-33d3-4330-a3f6-206c7c09e514",
+      "rawTextureUuid": "82abbd4e-1b7a-4317-9f2f-bd185a5948a5",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 480,
+      "height": 650,
+      "rawWidth": 480,
+      "rawHeight": 650,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
