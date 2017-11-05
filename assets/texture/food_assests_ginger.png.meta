@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "5bbac331-780a-4f90-be64-ece4515c76c1",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "food_assests_ginger": {
+      "ver": "1.0.3",
+      "uuid": "4c630d61-cca4-46b0-aba8-e47fcd560aa4",
+      "rawTextureUuid": "5bbac331-780a-4f90-be64-ece4515c76c1",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -2.5,
+      "offsetY": -2.5,
+      "trimX": 18,
+      "trimY": 10,
+      "width": 136,
+      "height": 162,
+      "rawWidth": 177,
+      "rawHeight": 177,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
