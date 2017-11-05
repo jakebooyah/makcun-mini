@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d6a60959-20f0-4132-8f98-17cb0bd7bd48",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "food_assests_salt": {
+      "ver": "1.0.3",
+      "uuid": "58fcaa88-ba4e-4189-b708-9ba991e83a3c",
+      "rawTextureUuid": "d6a60959-20f0-4132-8f98-17cb0bd7bd48",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2,
+      "offsetY": 0.5,
+      "trimX": 42,
+      "trimY": 15,
+      "width": 97,
+      "height": 146,
+      "rawWidth": 177,
+      "rawHeight": 177,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

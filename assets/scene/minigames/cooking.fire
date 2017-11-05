@@ -430,8 +430,8 @@
     "_color": {
       "__type__": "cc.Color",
       "r": 255,
-      "g": 185,
-      "b": 185,
+      "g": 255,
+      "b": 255,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -442,8 +442,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 100,
-      "height": 100
+      "width": 652,
+      "height": 572
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -451,8 +451,8 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 0,
-      "y": -151
+      "x": 4,
+      "y": -79
     },
     "_skewX": 0,
     "_skewY": 0,
@@ -470,10 +470,10 @@
     },
     "_enabled": true,
     "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
+      "__uuid__": "939cb9e6-e18f-4a3c-bf7f-ba257d50fc6e"
     },
     "_type": 0,
-    "_sizeMode": 0,
+    "_sizeMode": 2,
     "_fillType": 0,
     "_fillCenter": {
       "__type__": "cc.Vec2",
@@ -503,7 +503,7 @@
     "_top": 0,
     "_bottom": 0,
     "_verticalCenter": 0,
-    "_horizontalCenter": 0,
+    "_horizontalCenter": 4,
     "_isAbsLeft": true,
     "_isAbsRight": true,
     "_isAbsTop": true,

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e7e40120-279f-466e-8039-dc0f05be786c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "food_assests_chili": {
+      "ver": "1.0.3",
+      "uuid": "e6e1db34-d072-4d8f-9168-db0922c17eb9",
+      "rawTextureUuid": "e7e40120-279f-466e-8039-dc0f05be786c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": 0.5,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 170,
+      "height": 172,
+      "rawWidth": 177,
+      "rawHeight": 177,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
