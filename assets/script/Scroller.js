@@ -5,6 +5,7 @@ cc.Class({
 
     properties: {
         wheel: cc.Node,
+        planes: [cc.Node],
         _lastUpdateRotation: 0
     },
 
@@ -57,6 +58,9 @@ cc.Class({
         const delta = location.x - this._touchLocation.x;
         this._touchLocation = location;
         this.node.rotation = this.node.rotation + delta;//update the scroll position
+        this.planes.forEach(function (plane) {
+            plane.rotation = plane.rotation - delta;
+        });
         this.checkSelection();
     },
 
