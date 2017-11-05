@@ -9,7 +9,8 @@ cc.Class({
         playZone: cc.Node,
         progressBar: cc.ProgressBar,
         success: 0,
-        failed: 0
+        failed: 0,
+        spriteFrames: [cc.SpriteFrame]
     },
 
     onLoad() {
@@ -26,7 +27,7 @@ cc.Class({
 
         for (let index = 0; index < count; index++) {
             const summonIngrident = cc.instantiate(this.ingridient);
-            summonIngrident.x = Math.random() * 270 * (Math.random() < 0.5 ? 1 : -1);
+            summonIngrident.x = Math.random() * 200 * (Math.random() < 0.5 ? 1 : -1);
             summonIngrident.y = 500;
 
             const ingridientController = summonIngrident.getComponent('Ingredient');
@@ -34,7 +35,8 @@ cc.Class({
             const playZonePos = this.playZone.convertToNodeSpace(worldPos);
             ingridientController.setPotPosition(playZonePos);
             ingridientController.setOnDestroyCallBack(this.onIngridientDestroy.bind(this));
-            // ingridientController.setIngridient();
+            const randomType = Math.round(Math.random() * 7);
+            ingridientController.setIngridient(randomType, this.spriteFrames[randomType]);
             this.playZone.addChild(summonIngrident);
             ingridientController.init();
         }
@@ -43,6 +45,7 @@ cc.Class({
     onIngridientDestroy(isClicked, type) {
         cc.log(isClicked, type);
         if (isClicked) {
+            this.shakePot();
             this.success++;
             this.progressBar.progress = this.success / MAXSCORE;
             if (this.success >= MAXSCORE) {
@@ -51,6 +54,18 @@ cc.Class({
         } else {
             this.failed++;
         }
+    },
+
+    shakePot() {
+        const right = 5;
+        const left = -5;
+        this.pot.runAction(cc.sequence(
+            cc.rotateTo(0.1, right),
+            cc.rotateTo(0.1, left),
+            cc.rotateTo(0.1, right),
+            cc.rotateTo(0.1, left),
+            cc.rotateTo(0.1, 0),
+        ));
     },
 
     gameOver() {
