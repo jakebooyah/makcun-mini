@@ -28,7 +28,7 @@ cc.Class({
     //get location is an event function for location
 
     onTouchBegan(touch) {//when fingger touch it
-        cc.log('onTouchBegan');
+        // cc.log('onTouchBegan');
         this._isTouching = true;
         this._touchLocation = touch.getLocation();//get the location of a fingger
 
@@ -36,7 +36,7 @@ cc.Class({
     },
 
     onTouchEnded(touch, event) {
-        cc.log('onTouchEnded');//when fingger remove
+        // cc.log('onTouchEnded');//when fingger remove
         const location = touch.getLocation();//get the  current location
         this.rotateToPoint(location);//position of an object 
 
@@ -47,7 +47,7 @@ cc.Class({
     },
 
     onTouchMoved(touch, event) {
-        cc.log('onTouchMoved');
+        // cc.log('onTouchMoved');
         const location = touch.getLocation();
         this.rotateToPoint(location);//update of an object position
 

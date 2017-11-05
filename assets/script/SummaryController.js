@@ -20,6 +20,9 @@ cc.Class({
     },
 
     onBack() {
+        const path = cc.url.raw('resources/audio/state.mp3');
+        cc.audioEngine.play(path);
+
         this.node.active = false;
         const callback = this.onBackCallback;
         callback && callback();

@@ -43,6 +43,9 @@ cc.Class({
     },
 
     hideInfo() {
+        const path = cc.url.raw('resources/audio/state.mp3');
+        cc.audioEngine.play(path);
+
         this.content.active = false;
         this.tint.active = false;
     },

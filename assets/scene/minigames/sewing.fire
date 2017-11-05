@@ -5976,7 +5976,7 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 206,
+      "width": 560,
       "height": 200
     },
     "_rotationX": 0,
@@ -6031,8 +6031,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 2,
-      "height": 2
+      "width": 120,
+      "height": 109
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -6040,7 +6040,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": -102,
+      "x": -220,
       "y": 0
     },
     "_skewX": 0,
@@ -6058,9 +6058,7 @@
       "__id__": 150
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 2,
     "_fillType": 0,
@@ -6170,13 +6168,13 @@
     "_cascadeOpacityEnabled": true,
     "_anchorPoint": {
       "__type__": "cc.Vec2",
-      "x": 0.3,
-      "y": 0.3
+      "x": 0.5,
+      "y": 0.5
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 2,
-      "height": 2
+      "width": 120,
+      "height": 109
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -6202,9 +6200,7 @@
       "__id__": 154
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 2,
     "_fillType": 0,
@@ -6319,8 +6315,8 @@
     },
     "_contentSize": {
       "__type__": "cc.Size",
-      "width": 2,
-      "height": 2
+      "width": 120,
+      "height": 109
     },
     "_rotationX": 0,
     "_rotationY": 0,
@@ -6328,7 +6324,7 @@
     "_scaleY": 1,
     "_position": {
       "__type__": "cc.Vec2",
-      "x": 102,
+      "x": 220,
       "y": 0
     },
     "_skewX": 0,
@@ -6346,9 +6342,7 @@
       "__id__": 158
     },
     "_enabled": true,
-    "_spriteFrame": {
-      "__uuid__": "a23235d1-15db-4b95-8439-a2e005bfff91"
-    },
+    "_spriteFrame": null,
     "_type": 0,
     "_sizeMode": 2,
     "_fillType": 0,
@@ -6437,7 +6431,7 @@
     "_enabled": true,
     "_layoutSize": {
       "__type__": "cc.Size",
-      "width": 206,
+      "width": 560,
       "height": 200
     },
     "_resize": 1,
@@ -7878,6 +7872,9 @@
       },
       {
         "__uuid__": "45619d18-bf0f-4f46-85e9-11b080ea8031"
+      },
+      {
+        "__uuid__": "709c7605-362d-4a77-a32d-c2cfd40cee3b"
       },
       {
         "__uuid__": "e35a9740-3c0c-4e28-b107-939928c24ae4"

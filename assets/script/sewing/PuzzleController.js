@@ -1,44 +1,35 @@
-function shuffle(array) {
-    var i = array.length,
-        j = 0,
-        temp;
-
-    while (i--) {
-
-        j = Math.floor(Math.random() * (i + 1));
-
-        // swap randomly chosen element with current element
-        temp = array[i];
+function shuffleArray(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
         array[i] = array[j];
         array[j] = temp;
-
     }
-
-    return array;
 }
 
 cc.Class({
     extends: cc.Component,
 
     properties: {
-        puzzleindex: 1
+        puzzleindex: 0
     },
 
-    // // use this for initialization
-    // onLoad() {
-    //     const N = 53;
-    //     this.ranNums = shuffle([Array.apply(null, { length: N }).map(Number.call, Number)]);
-    // },
+    // use this for initialization
+    onLoad() {
+        this.ranNums = Array.from(Array(53).keys())
+        shuffleArray(this.ranNums);
+    },
 
     next() {
-        const name = 'puzzles_piece' + this.puzzleindex;
+        const name = 'puzzles_piece' + (this.ranNums[this.puzzleindex] + 1);
         this.node.getChildByName(name).active = true;
         this.puzzleindex++;
     },
 
     showAll() {
-        this.node.children.forEach(function (child) {
-            child.active = true;
-        }, this);
+        let children = this.node.children;
+        for (var i = 0; i < children.length; ++i) {
+            children[i].active = true;
+        }
     },
 });

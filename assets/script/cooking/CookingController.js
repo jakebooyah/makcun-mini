@@ -136,13 +136,19 @@ cc.Class({
         const selection = INGRIDIENT[selectid];
 
         if (prefer.indexOf(selection) != -1) {
+            const path = cc.url.raw('resources/audio/correct.mp3');
+            cc.audioEngine.play(path);
             this.bonus++;
+        } else {
+            const path = cc.url.raw('resources/audio/failed.mp3');
+            cc.audioEngine.play(path);
         }
 
         this.isPaused = false;
     },
 
     gameOver() {
+        cc.audioEngine.stopAll();
         const path = cc.url.raw('resources/audio/summary.mp3');
         cc.audioEngine.play(path);
 

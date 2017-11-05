@@ -80,7 +80,7 @@ cc.Class({
 
             this.progressBar.progress = this.success / MAXSCORE;
             if (this.success >= MAXSCORE) {
-                this.this.puzzleControlller.showAll();
+                this.puzzleControlller.showAll();
                 this.gameOver();
             }
 
@@ -99,7 +99,7 @@ cc.Class({
     },
 
     showBonus() {
-        this.needleController.setEnable(false);
+        this.setEnable(false);
 
         const id = SCENE.id;
         const name = REGIONS[id];
@@ -130,20 +130,27 @@ cc.Class({
         const id = SCENE.id;
         const name = REGIONS[id];
         const prefer = REGIONSPREFER[name];
-        const selection = INGRIDIENT[selectid];
+        const selection = COLOURS[selectid];
 
         if (prefer.indexOf(selection) != -1) {
+            const path = cc.url.raw('resources/audio/correct.mp3');
+            cc.audioEngine.play(path);
             this.bonus++;
+        } else {
+            const path = cc.url.raw('resources/audio/failed.mp3');
+            cc.audioEngine.play(path);
         }
 
-        this.needleController.setEnable(true);
+        this.setEnable(true);
     },
 
     gameOver() {
-        const path = cc.url.raw('resources/audio/summary.mp3');
-        cc.audioEngine.play(path, true);
-
         this.needleController.setEnable(false);
+        cc.audioEngine.stopAll();
+        const path = cc.url.raw('resources/audio/summary.mp3');
+        cc.audioEngine.play(path);
+
+        this.setEnable(false);
 
         const id = SCENE.id;
         const name = REGIONS[id];
