@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "6d92990a-2167-4ff7-93f0-0dd4fa9a6264",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "sewing_assests_color_white": {
+      "ver": "1.0.3",
+      "uuid": "4b192410-a176-4e5e-8d16-510b2bc4ff7c",
+      "rawTextureUuid": "6d92990a-2167-4ff7-93f0-0dd4fa9a6264",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 14,
+      "offsetY": 1.5,
+      "trimX": 28,
+      "trimY": 55,
+      "width": 422,
+      "height": 357,
+      "rawWidth": 450,
+      "rawHeight": 470,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
