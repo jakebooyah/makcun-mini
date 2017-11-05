@@ -198,9 +198,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 255,
-      "g": 255,
-      "b": 255,
+      "r": 250,
+      "g": 238,
+      "b": 226,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,
@@ -562,9 +562,9 @@
     "_opacity": 255,
     "_color": {
       "__type__": "cc.Color",
-      "r": 138,
-      "g": 138,
-      "b": 138,
+      "r": 60,
+      "g": 51,
+      "b": 45,
       "a": 255
     },
     "_cascadeOpacityEnabled": true,

@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "86024ad4-4747-487f-9894-6d550f48764f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "sewing_assests_puzzle_background": {
+      "ver": "1.0.3",
+      "uuid": "f5649b1b-afdf-4236-987f-30f0af6a5a91",
+      "rawTextureUuid": "86024ad4-4747-487f-9894-6d550f48764f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1143,
+      "height": 768,
+      "rawWidth": 1143,
+      "rawHeight": 768,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

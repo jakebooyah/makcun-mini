@@ -16,6 +16,7 @@ cc.Class({
     properties: {
         needleHolder: cc.Node,
         touchNode: cc.Node,
+        puzzleNode: cc.Node,
         progressBar: cc.ProgressBar,
         success: 0,
         failed: 0,
@@ -28,6 +29,7 @@ cc.Class({
     },
 
     onLoad() {
+        this.puzzleControlller = this.puzzleNode.getComponent('PuzzleController');
         this.bonusController = this.bonusHolder.getComponent('BonusController');
         this.summaryController = this.summaryHolder.getComponent('SummaryController');
         this.needleController = this.needleHolder.getComponent('NeedleController');
@@ -49,7 +51,7 @@ cc.Class({
 
         if (success) {
             this.success++;
-
+            this.puzzleControlller.next();
             const right = 3;
             const left = -3;
 
@@ -71,6 +73,7 @@ cc.Class({
 
             this.progressBar.progress = this.success / MAXSCORE;
             if (this.success >= MAXSCORE) {
+                this.this.puzzleControlller.showAll();
                 this.gameOver();
             }
 
