@@ -1,4 +1,13 @@
+import { INGRIDIENT, REGIONS, REGIONSPREFER, SCENE } from 'Constants';
+
 const MAXSCORE = 50;
+
+function shuffle(a) {
+    for (let i = a.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [a[i], a[j]] = [a[j], a[i]];
+    }
+}
 
 cc.Class({
     extends: cc.Component,
@@ -10,13 +19,14 @@ cc.Class({
         progressBar: cc.ProgressBar,
         success: 0,
         failed: 0,
+        bonus: 0,
         spriteFrames: [cc.SpriteFrame],
         isPaused: false,
         bonusHolder: cc.Node
     },
 
     onLoad() {
-        this.bonusController = this.bonusHolder.getComponent('BonusController');
+        this.bonusController = this.bonusHolder.getComponent('BonusCookingController');
         this.startGame();
     },
 
@@ -82,11 +92,46 @@ cc.Class({
 
     showBonus() {
         this.isPaused = true;
-        this.bonusController.init();
+        const id = SCENE.id;
+        const name = REGIONS[id];
+        const prefer = REGIONSPREFER[name];
+        const randomPrize = prefer[Math.floor(Math.random() * prefer.length)];
+        const randomPrize1 = INGRIDIENT[Math.floor(Math.random() * INGRIDIENT.length)];
+        const randomPrize2 = INGRIDIENT[Math.floor(Math.random() * INGRIDIENT.length)];
+        const options = [INGRIDIENT.indexOf(randomPrize), INGRIDIENT.indexOf(randomPrize1), INGRIDIENT.indexOf(randomPrize2)];
+        shuffle(options);
+        this.bonusController.init(
+            {
+                id: options[0],
+                sf: this.spriteFrames[options[0]]
+            },
+            {
+                id: options[1],
+                sf: this.spriteFrames[options[1]]
+            },
+            {
+                id: options[2],
+                sf: this.spriteFrames[options[2]]
+            },
+            this.onBonusSelect.bind(this)
+        );
+    },
+
+    onBonusSelect(selectid) {
+        const id = SCENE.id;
+        const name = REGIONS[id];
+        const prefer = REGIONSPREFER[name];
+        const selection = INGRIDIENT[selectid];
+
+        if (prefer.indexOf(selection) != -1) {
+            this.bonus++;
+        }
+
+        this.isPaused = false;
     },
 
     gameOver() {
-        cc.log('gameover! success: ' + this.success + ' failed: ' + this.failed);
+        cc.log('gameover! success: ' + this.success + ' failed: ' + this.failed + 'bonus' + this.bonus);
         this.unschedule(this.spawnIngridient);
     },
 });
