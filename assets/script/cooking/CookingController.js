@@ -1,4 +1,5 @@
-import { INGRIDIENT, REGIONS, REGIONSPREFER, SCENE } from 'Constants';
+import { INGRIDIENT, REGIONS, REGIONSPREFER, SCENE, GAMEREPUTATION, GAMEBASEWIN, GAMEBONUSWINPERSTAR, GAMEPENALTYPERMISTAKE } from 'Constants';
+import { model, setData } from 'Model';
 
 const MAXSCORE = 50;
 
@@ -22,11 +23,13 @@ cc.Class({
         bonus: 0,
         spriteFrames: [cc.SpriteFrame],
         isPaused: false,
-        bonusHolder: cc.Node
+        bonusHolder: cc.Node,
+        summaryHolder: cc.Node
     },
 
     onLoad() {
         this.bonusController = this.bonusHolder.getComponent('BonusCookingController');
+        this.summaryController = this.summaryHolder.getComponent('SummaryController');
         this.startGame();
     },
 
@@ -133,5 +136,25 @@ cc.Class({
     gameOver() {
         cc.log('gameover! success: ' + this.success + ' failed: ' + this.failed + 'bonus' + this.bonus);
         this.unschedule(this.spawnIngridient);
+
+        const id = SCENE.id;
+        const name = REGIONS[id];
+        const repBonus = model.reputation;
+        const bonus = this.bonus;
+        const missed = this.failed;
+        const earned = GAMEBASEWIN[name] +
+            GAMEBONUSWINPERSTAR[name] * bonus -
+            GAMEPENALTYPERMISTAKE[name] * missed;
+        const realEarning = earned < 0 ? 0 : earned * (100 + repBonus) / 100;
+        const repEarned = GAMEREPUTATION[name];
+
+        setData('reputation', model.reputation + repEarned);
+        setData('cash', model.cash + realEarning);
+
+        this.summaryController.init(repBonus, bonus, missed, realEarning, repEarned, this.backToMain);
+    },
+
+    backToMain() {
+        cc.director.loadScene('main');
     },
 });
