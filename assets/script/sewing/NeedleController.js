@@ -30,6 +30,15 @@ cc.Class({
             this.speedUp();
             return true;
         } else {
+            const right = 3;
+            const left = -3;
+            this.node.runAction(cc.sequence(
+                cc.rotateTo(0.1, right),
+                cc.rotateTo(0.1, left),
+                cc.rotateTo(0.1, right),
+                cc.rotateTo(0.1, left),
+                cc.rotateTo(0.1, 0),
+            ));
             this.resetSpeed();
             return false;
         }

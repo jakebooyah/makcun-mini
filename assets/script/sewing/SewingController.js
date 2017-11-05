@@ -22,7 +22,9 @@ cc.Class({
         bonus: 0,
         spriteFrames: [cc.SpriteFrame],
         bonusHolder: cc.Node,
-        summaryHolder: cc.Node
+        summaryHolder: cc.Node,
+        bar1: cc.Node,
+        bar2: cc.Node
     },
 
     onLoad() {
@@ -47,6 +49,25 @@ cc.Class({
 
         if (success) {
             this.success++;
+
+            const right = 3;
+            const left = -3;
+
+            this.bar1.runAction(cc.sequence(
+                cc.moveTo(0.1, cc.p(right, this.bar1.y)),
+                cc.moveTo(0.1, cc.p(left, this.bar1.y)),
+                cc.moveTo(0.1, cc.p(right, this.bar1.y)),
+                cc.moveTo(0.1, cc.p(left, this.bar1.y)),
+                cc.moveTo(0.1, cc.p(0, this.bar1.y)),
+            ));
+
+            this.bar2.runAction(cc.sequence(
+                cc.moveTo(0.1, cc.p(right, this.bar2.y)),
+                cc.moveTo(0.1, cc.p(left, this.bar2.y)),
+                cc.moveTo(0.1, cc.p(right, this.bar2.y)),
+                cc.moveTo(0.1, cc.p(left, this.bar2.y)),
+                cc.moveTo(0.1, cc.p(0, this.bar2.y)),
+            ));
 
             this.progressBar.progress = this.success / MAXSCORE;
             if (this.success >= MAXSCORE) {
