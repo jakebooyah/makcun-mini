@@ -18,6 +18,6 @@ cc.Class({
 
     setCash(newValue) {
         setData('cash', newValue);
-        this.cashLabel.string = newValue + postFix;
+        this.cashLabel.string = newValue.toFixed(2) + postFix;
     }
 });
