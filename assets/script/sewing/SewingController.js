@@ -29,6 +29,10 @@ cc.Class({
     },
 
     onLoad() {
+        cc.audioEngine.stopAll();
+        const path = cc.url.raw('resources/audio/sewing_bgm.mp3');
+        cc.audioEngine.play(path, true);
+
         this.puzzleControlller = this.puzzleNode.getComponent('PuzzleController');
         this.bonusController = this.bonusHolder.getComponent('BonusController');
         this.summaryController = this.summaryHolder.getComponent('SummaryController');
@@ -50,6 +54,9 @@ cc.Class({
         const success = this.needleController.isSuccess();
 
         if (success) {
+            const path = cc.url.raw('resources/audio/correct.mp3');
+            cc.audioEngine.play(path);
+
             this.success++;
             this.puzzleControlller.next();
             const right = 3;
@@ -83,6 +90,8 @@ cc.Class({
             };
 
         } else {
+            const path = cc.url.raw('resources/audio/failed.mp3');
+            cc.audioEngine.play(path);
             this.failed++;
         }
 
@@ -131,6 +140,9 @@ cc.Class({
     },
 
     gameOver() {
+        const path = cc.url.raw('resources/audio/summary.mp3');
+        cc.audioEngine.play(path, true);
+
         this.needleController.setEnable(false);
 
         const id = SCENE.id;

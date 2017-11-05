@@ -11,6 +11,7 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
+        cc.audioEngine.stopAll();
         const delegates = this.delegates = {};
 
         delegates.reputationController = this.reputationControllerHolder.getComponent('Reputation');
@@ -24,10 +25,17 @@ cc.Class({
         delegates.reputationController.init();
         delegates.regionsController.init();
         delegates.infoController.init(delegates.cashController, delegates.regionsController);
+
+
+        const path = cc.url.raw('resources/audio/menu_bgm.mp3');
+        cc.audioEngine.play(path, true);
     },
 
     onRegionSelect() {
         this.delegates.regionsController.selectRegion(this._onRegionSelected.bind(this));
+
+        const path = cc.url.raw('resources/audio/state.mp3');
+        cc.audioEngine.play(path);
     },
 
     _onRegionSelected(selectedRegion) {

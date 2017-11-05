@@ -28,6 +28,10 @@ cc.Class({
     },
 
     onLoad() {
+        cc.audioEngine.stopAll();
+        const path = cc.url.raw('resources/audio/cooking_bgm.mp3');
+        cc.audioEngine.play(path, true);
+
         this.bonusController = this.bonusHolder.getComponent('BonusController');
         this.summaryController = this.summaryHolder.getComponent('SummaryController');
         this.startGame();
@@ -63,6 +67,9 @@ cc.Class({
     onIngridientDestroy(isClicked, type) {
         cc.log(isClicked, type);
         if (isClicked) {
+            const path = cc.url.raw('resources/audio/chicken.mp3');
+            cc.audioEngine.play(path);
+
             this.shakePot();
             this.success++;
 
@@ -77,6 +84,8 @@ cc.Class({
             };
 
         } else {
+            const path = cc.url.raw('resources/audio/failed.mp3');
+            cc.audioEngine.play(path);
             this.failed++;
         }
     },
@@ -134,6 +143,9 @@ cc.Class({
     },
 
     gameOver() {
+        const path = cc.url.raw('resources/audio/summary.mp3');
+        cc.audioEngine.play(path);
+
         cc.log('gameover! success: ' + this.success + ' failed: ' + this.failed + 'bonus' + this.bonus);
         this.unschedule(this.spawnIngridient);
 

@@ -60,6 +60,9 @@ cc.Class({
         const price = PRICES[name];
 
         if (price < this.cashController.getCash()) {
+            const path = cc.url.raw('resources/audio/unlock.mp3');
+            cc.audioEngine.play(path);
+
             this.cashController.setCash(this.cashController.getCash() - price);
             this.lockedStateLabel.string = 'unlocked';
             this.actionButton.spriteFrame = this.investSpriteFrame;
@@ -67,6 +70,9 @@ cc.Class({
             setData(name, 1);
             this.regionsController.updateRegion(stateId);
         } else {
+            const path = cc.url.raw('resources/audio/failed.mp3');
+            cc.audioEngine.play(path);
+
             const ori = this.button.x;
             const right = this.button.x + 10;
             const left = this.button.x - 10;

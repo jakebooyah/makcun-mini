@@ -15,7 +15,7 @@ cc.Class({
             this.regions[index].getComponent('Region').setIsUnlock(model[name]);
         }
 
-        this.hightlightRegion(0);
+        this.hightlightRegion(0, true);
     },
 
     updateRegion(id) {
@@ -30,7 +30,9 @@ cc.Class({
         });
     },
 
-    hightlightRegion(id) {
+    hightlightRegion(id, muted = false) {
+        const path = cc.url.raw('resources/audio/state.mp3');
+        if (!muted) cc.audioEngine.play(path);
         this.regions[this._highlightedRegion].getComponent('Region').setHighlight(false);
         this._highlightedRegion = id;
         this.regions[id].getComponent('Region').setHighlight(true);
