@@ -49,6 +49,9 @@ const INVESTPRICES = {
     Sabah: 500000
 };
 
+const INGRIDIENT = ['Chilli', 'Coconut Milk', 'Ginger', 'Pandan', 'Pepper', 'Salt', 'Sambal', 'Sugar'];
+const COLOURS = ['Green', 'Purple', 'Red', 'Blue', 'Black', 'White', 'Yellow'];
+
 const REGIONSPREFER = {
     Kedah: ['Chilli', 'Pepper', 'Coconut Milk'],
     Perlis: ['Green', 'Purple', 'Red'],
@@ -64,6 +67,108 @@ const REGIONSPREFER = {
     Johor: ['Black', 'Yellow', 'Red'],
     Sarawak: ['Coconut Milk', 'Salt', 'Sugar'],
     Sabah: ['White', 'Green', 'Yellow'],
-}
+};
 
-export { REGIONS, PRICES, INVESTPRICES, REGIONSPREFER };
+const GAMES = {
+    Kedah: 'cooking',
+    Perlis: 'sewing',
+    PulauPinang: 'cooking',
+    Perak: 'sewing',
+    Kelantan: 'cooking',
+    Terrenganu: 'sewing',
+    Pahang: 'cooking',
+    Selangor: 'sewing',
+    KualaLumpur: 'cooking',
+    NegeriSembilan: 'sewing',
+    Melaka: 'cooking',
+    Johor: 'sewing',
+    Sarawak: 'cooking',
+    Sabah: 'sewing'
+};
+
+const GAMEBASEWIN = {
+    Kedah: 2200,
+    Perlis: 7000,
+    PulauPinang: 15000,
+    Perak: 25000,
+    Kelantan: 55000,
+    Terrenganu: 90000,
+    Pahang: 230000,
+    Selangor: 500000,
+    KualaLumpur: 850000,
+    NegeriSembilan: 1100000,
+    Melaka: 2200000,
+    Johor: 4000000,
+    Sarawak: 7000000,
+    Sabah: 10000000
+};
+
+const GAMEBONUSWINPERSTAR = {
+    Kedah: 120,
+    Perlis: 150,
+    PulauPinang: 1000,
+    Perak: 1200,
+    Kelantan: 2000,
+    Terrenganu: 3000,
+    Pahang: 5000,
+    Selangor: 10000,
+    KualaLumpur: 20000,
+    NegeriSembilan: 40000,
+    Melaka: 80000,
+    Johor: 100000,
+    Sarawak: 150000,
+    Sabah: 300000
+};
+
+const GAMEREPUTATION = {
+    Kedah: 1,
+    Perlis: 1,
+    PulauPinang: 2,
+    Perak: 2,
+    Kelantan: 3,
+    Terrenganu: 3,
+    Pahang: 4,
+    Selangor: 4,
+    KualaLumpur: 5,
+    NegeriSembilan: 5,
+    Melaka: 6,
+    Johor: 6,
+    Sarawak: 7,
+    Sabah: 7
+};
+
+const GAMEPENALTYPERMISTAKE = {
+    Kedah: 1,
+    Perlis: 2,
+    PulauPinang: 4,
+    Perak: 8,
+    Kelantan: 16,
+    Terrenganu: 32,
+    Pahang: 64,
+    Selangor: 128,
+    KualaLumpur: 256,
+    NegeriSembilan: 512,
+    Melaka: 1024,
+    Johor: 2048,
+    Sarawak: 4096,
+    Sabah: 8192
+};
+
+const SCENE = {
+    id: 0
+};
+
+export {
+    REGIONS,
+    PRICES,
+    INVESTPRICES,
+    INGRIDIENT,
+    COLOURS,
+    REGIONSPREFER,
+    GAMEBASEWIN,
+    SCENE,
+    GAMES,
+    GAMEBONUSWINPERSTAR,
+    GAMEREPUTATION,
+    GAMEPENALTYPERMISTAKE
+};

@@ -482,7 +482,7 @@
     },
     "_fillStart": 0,
     "_fillRange": 0,
-    "_isTrimmedMode": true,
+    "_isTrimmedMode": false,
     "_srcBlendFactor": 770,
     "_dstBlendFactor": 771,
     "_atlas": null
@@ -1344,9 +1344,6 @@
     "progressBar": {
       "__id__": 9
     },
-    "content": {
-      "__id__": 3
-    },
     "success": 0,
     "failed": 0,
     "spriteFrames": [
@@ -1374,6 +1371,10 @@
       {
         "__uuid__": "d7ecc1e3-417a-452e-a1a4-a07063a3f471"
       }
-    ]
+    ],
+    "isPaused": false,
+    "bonusHolder": {
+      "__id__": 17
+    }
   }
 ]

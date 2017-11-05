@@ -10,10 +10,13 @@ cc.Class({
         progressBar: cc.ProgressBar,
         success: 0,
         failed: 0,
-        spriteFrames: [cc.SpriteFrame]
+        spriteFrames: [cc.SpriteFrame],
+        isPaused: false,
+        bonusHolder: cc.Node
     },
 
     onLoad() {
+        this.bonusController = this.bonusHolder.getComponent('BonusController');
         this.startGame();
     },
 
@@ -23,6 +26,8 @@ cc.Class({
 
     //summon ingridient
     spawnIngridient() {
+        if (this.isPaused) return;
+
         const count = Math.random() > 0.5 ? 1 : 2;
 
         for (let index = 0; index < count; index++) {
@@ -47,10 +52,17 @@ cc.Class({
         if (isClicked) {
             this.shakePot();
             this.success++;
+
             this.progressBar.progress = this.success / MAXSCORE;
             if (this.success >= MAXSCORE) {
                 this.gameOver();
             }
+
+            //bonus game
+            if (this.success == 15 || this.success == 30 || this.success == 45) {
+                this.showBonus();
+            };
+
         } else {
             this.failed++;
         }
@@ -66,6 +78,11 @@ cc.Class({
             cc.rotateTo(0.1, left),
             cc.rotateTo(0.1, 0),
         ));
+    },
+
+    showBonus() {
+        this.isPaused = true;
+        this.bonusController.init();
     },
 
     gameOver() {

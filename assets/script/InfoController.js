@@ -1,5 +1,5 @@
 import { model, setData } from 'Model';
-import { REGIONS, PRICES, INVESTPRICES, REGIONSPREFER } from 'Constants';
+import { REGIONS, PRICES, INVESTPRICES, REGIONSPREFER, SCENE, GAMES } from 'Constants';
 
 cc.Class({
     extends: cc.Component,
@@ -79,6 +79,26 @@ cc.Class({
     },
 
     invest() {
-        cc.log('start game here');
+        const id = this.stateId;
+        const name = REGIONS[id];
+        const price = INVESTPRICES[name];
+
+        if (price < this.cashController.getCash()) {
+            this.cashController.setCash(this.cashController.getCash() - price);
+            SCENE.id = id;
+            cc.director.loadScene(GAMES[name]);
+        } else {
+            const ori = this.button.x;
+            const right = this.button.x + 10;
+            const left = this.button.x - 10;
+
+            this.button.runAction(cc.sequence(
+                cc.moveTo(0.1, cc.p(right, this.button.y)),
+                cc.moveTo(0.1, cc.p(left, this.button.y)),
+                cc.moveTo(0.1, cc.p(right, this.button.y)),
+                cc.moveTo(0.1, cc.p(ori, this.button.y)),
+            ))
+            cc.log('poor!');
+        }
     },
 });
