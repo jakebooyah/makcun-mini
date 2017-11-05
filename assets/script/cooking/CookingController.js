@@ -28,7 +28,7 @@ cc.Class({
     },
 
     onLoad() {
-        this.bonusController = this.bonusHolder.getComponent('BonusCookingController');
+        this.bonusController = this.bonusHolder.getComponent('BonusController');
         this.summaryController = this.summaryHolder.getComponent('SummaryController');
         this.startGame();
     },

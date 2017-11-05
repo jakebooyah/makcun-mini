@@ -1177,7 +1177,7 @@
     "target": {
       "__id__": 17
     },
-    "component": "BonusCookingController",
+    "component": "BonusController",
     "handler": "button1Select",
     "customEventData": ""
   },
@@ -1321,7 +1321,7 @@
     "target": {
       "__id__": 17
     },
-    "component": "BonusCookingController",
+    "component": "BonusController",
     "handler": "button2Select",
     "customEventData": ""
   },
@@ -1465,7 +1465,7 @@
     "target": {
       "__id__": 17
     },
-    "component": "BonusCookingController",
+    "component": "BonusController",
     "handler": "button3Select",
     "customEventData": ""
   },
